@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test" tests="4" errors="0" failures="1" skipped="0" time="20.594">
+<testcase classname="Test" name="TestCase01" time="20.083">
+<failure message="Text 'React Appx' did not appear in 5 seconds." type="AssertionError"/>
+</testcase>
+<testcase classname="Test" name="TestCase02" time="0.038">
+</testcase>
+<testcase classname="Test" name="TestCase03" time="0.106">
+</testcase>
+<testcase classname="Test" name="TestCase04" time="0.060">
+</testcase>
+</testsuite>
