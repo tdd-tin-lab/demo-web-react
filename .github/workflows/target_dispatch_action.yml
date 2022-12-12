@@ -18,8 +18,14 @@ jobs:
           echo 'ParamA' is ${{ github.event.client_payload.paramA }}
           echo 'ParamBoolean' is ${{ github.event.client_payload.paramBoo }}
           
-      - name: Set Output
-        run: |
-          echo "ParamA=${{ github.event.client_payload.paramA }}" >> $GITHUB_OUTPUT
-          echo "ParamBoolean=${{ github.event.client_payload.paramBoo }}" >> $GITHUB_OUTPUT
+#       - name: Set Output
+#         run: |
+#           echo "{ParamA}=${{ github.event.client_payload.paramA }}" >> $GITHUB_OUTPUT
+#           echo "{ParamBoolean=${{ github.event.client_payload.paramBoo }}" >> $GITHUB_OUTPUT
+          
+      - name: Save state
+        run: echo "{name}={value}" >> $GITHUB_STATE
+
+      - name: Set output
+        run: echo "{name}={value}" >> $GITHUB_OUTPUT          
                
