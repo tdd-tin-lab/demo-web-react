@@ -21,6 +21,6 @@ jobs:
 
       - name: Set Annotations
         run: |
-          echo "::notice::ParamA : ${{ github.event.client_payload.paramA }}
+          echo "::notice::ParamA : ${{ github.event.client_payload.paramA }}"
           echo "::notice::ParamBoolean : ${{ github.event.client_payload.paramBoo }}"
 
