@@ -1,0 +1,20 @@
+name: Target Dispatch Action
+
+on:
+  repository_dispatch:
+    types: [MyCustomEventName]
+  
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:    
+      - name: Print client payload
+        run: |
+          echo "ParamA is ${{ github.event_client_payload.paramA }}"
+          echo "ParamBoolean is ${{ github.event_client_payload.ParamBoolean }}"
+        
