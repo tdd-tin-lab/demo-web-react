@@ -17,15 +17,10 @@ jobs:
         run: |
           echo 'ParamA' is ${{ github.event.client_payload.paramA }}
           echo 'ParamBoolean' is ${{ github.event.client_payload.paramBoo }}
-          
-#       - name: Set Output
-#         run: |
-#           echo "{ParamA}=${{ github.event.client_payload.paramA }}" >> $GITHUB_OUTPUT
-#           echo "{ParamBoolean=${{ github.event.client_payload.paramBoo }}" >> $GITHUB_OUTPUT
-          
-      - name: Save state
-        run: echo "{test}={xxxx}" >> $GITHUB_STATE
 
-      - name: Set output
-        run: echo "{asdfasdf}={uuuu}" >> $GITHUB_OUTPUT          
-               
+
+      - name: Set Annotations
+        run: |
+          echo "::notice::ParamA : ${{ github.event.client_payload.paramA }}
+          echo "::notice::ParamBoolean : ${{ github.event.client_payload.paramBoo }}"
+
