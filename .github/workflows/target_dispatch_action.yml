@@ -16,5 +16,5 @@ jobs:
       - name: Print client payload
         run: |
           echo "ParamA is ${{ github.event_client_payload.paramA }}"
-          echo "ParamBoolean is ${{ github.event_client_payload.ParamBoolean }}"
+          echo "ParamBoolean is ${{ github.event_client_payload.paramBoo }}"
         
