@@ -1,0 +1,15 @@
+name: "Semgrep Scan"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: auto  # Automatically find rules based on the code in your repo
