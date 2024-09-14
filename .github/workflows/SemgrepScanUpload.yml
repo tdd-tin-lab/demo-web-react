@@ -16,7 +16,7 @@ jobs:
       # Run Semgrep and save the result as a JSON file
       - name: Run Semgrep
         run: | 
-          semgrep --config auto --json  --include '**/*.* > semgrep-results.json
+          semgrep --config auto --json  --include '**/*.*' > semgrep-results.json
           ls -lrt
 
         
