@@ -13,3 +13,11 @@ jobs:
         uses: returntocorp/semgrep-action@v1
         with:
           config: auto  # Automatically find rules based on the code in your repo
+          output: semgrep-results.json  # Save the result to a file
+
+      # Upload the Semgrep result as an artifact
+      - name: Upload Semgrep Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: semgrep-results
+          path: semgrep-results.json          
