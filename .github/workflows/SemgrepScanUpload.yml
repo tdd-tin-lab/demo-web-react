@@ -1,0 +1,22 @@
+name: "Semgrep Scan Upload"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+   
+      # Install Semgrep CLI
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      # Run Semgrep and save the result as a JSON file
+      - name: Run Semgrep
+        run: | 
+          semgrep --config auto --json > semgrep-results.json
+          ls -lrt
+          
+        
